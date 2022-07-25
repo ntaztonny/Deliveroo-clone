@@ -11,7 +11,7 @@ npm-debug.*
 web-build/
 
 #sanity
-sanity
+sanity/node_modules
 
 # macOS
 .DS_Store
