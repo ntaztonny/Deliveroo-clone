@@ -58,20 +58,16 @@ const DishRow = ({ id, name, description, price, image }) => {
       {isPressed && (
         <View className="bg-white  px-4">
           <View className="flex-row items-center space-x-2 pb-3">
-            <TouchableOpacity onPress={removeItems}>
+            <TouchableOpacity disabled={!items.length} onPress={removeItems}>
               <MinusCircleIcon
                 size={40}
-                //   color={items.length > 0 ? "#00CCBB" : "gray"}
-                color="#00CCBB"
+                color={items.length > 0 ? "#00CCBB" : "gray"}
+                // color="#00CCBB"
               />
             </TouchableOpacity>
             <Text>{items.length}</Text>
             <TouchableOpacity onPress={addItems}>
-              <PlusCircleIcon
-                size={40}
-                color="#00CCBB"
-                //   color={items.length > 0 ? "#00CCBB" : "gray"}
-              />
+              <PlusCircleIcon size={40} color="#00CCBB" />
             </TouchableOpacity>
           </View>
         </View>
